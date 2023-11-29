@@ -35,6 +35,7 @@ class SplashScreen(Screen):
 # Classe da tela SecondScreen
 class SecondScreen(Screen):
     def update_data(self, dados_empresa):
+
         # Atualizar os widgets com os dados obtidos
         self.ids.simbolo_label.text = f"{dados_empresa['simbolo']}"
         self.ids.nome_label.text = f"{dados_empresa['nome_completo']}"
@@ -43,7 +44,7 @@ class SecondScreen(Screen):
         self.ids.volume_label.text = f"Volume: {dados_empresa['volume']}"
 
         # Limpar widgets no layout de gráficos antes de adicionar um novo gráfico
-        self.ids.graph_layout.clear_widgets()
+        self.ids.graph_layout_2.clear_widgets()
 
 
         # Carregar a imagem diretamente do diretorio_logos
@@ -65,6 +66,7 @@ class CenteredGraphLayout(BoxLayout, ScrollView):
 # Classe principal da aplicação
 class HealthApp(MDApp):
     def build(self):
+    
         # Criando o gerenciador de telas
         self.sm = ScreenManager()
         
@@ -80,6 +82,7 @@ class HealthApp(MDApp):
         return self.sm
 
     def favoritos(self):
+
         self.sm.current = 'third'
         self.load_favorites()
 
@@ -94,20 +97,25 @@ class HealthApp(MDApp):
         # Limpar a lista existente na ThirdScreen
         self.third_screen.ids.lista_layout.clear_widgets()
 
-        # Adicionar dados dos favoritos à ThirdScreen
+        # Adicionar dados dos favoritos à ThirdScreen, evitando repetições
+        added_symbols = set()  # Conjunto para rastrear os símbolos já adicionados
         for favorite in favorites_data:
-            # Crie um OneLineListItem para cada favorito
-            list_item = OneLineListItem(text=f"{favorite['simbolo']} - {favorite['nome_completo']}")
-            
-            # Adicione a propriedade theme_text_color para definir a cor do texto
-            list_item.theme_text_color = 'Custom'
-            list_item.text_color = [1, 1, 1, 0.5]  # Branco em RGBA
-            
-            list_item.bind(on_release=self.show_favorite_details)  # Adicione um evento ao clicar no item
-            # Adicione o OneLineListItem à lista_layout
-            self.third_screen.ids.lista_layout.add_widget(list_item)
-            
+            symbol = favorite['simbolo']
+            # Verificar se o símbolo já foi adicionado
+            if symbol not in added_symbols:
+                # Adicione apenas se não estiver repetido
+                added_symbols.add(symbol)
+                # Crie um OneLineListItem para cada favorito
+                list_item = OneLineListItem(text=f"{symbol} - {favorite['nome_completo']}")
+                # Adicione a propriedade theme_text_color para definir a cor do texto
+                list_item.theme_text_color = 'Custom'
+                list_item.text_color = [1, 1, 1, 0.5]  # Branco em RGBA
+                list_item.bind(on_release=self.show_favorite_details)  # Adicione um evento ao clicar no item
+                # Adicione o OneLineListItem à lista_layout
+                self.third_screen.ids.lista_layout.add_widget(list_item)  
     def show_favorite_details(self, instance):
+        self.second_screen.ids.graph_layout_2.clear_widgets()
+
         # Lógica para mostrar detalhes do favorito quando clicado
         # Você pode acessar os dados do favorito usando instance.text ou de acordo com a estrutura de dados que você está usando
         print(f"Detalhes do favorito: {instance.text}")
@@ -124,7 +132,7 @@ class HealthApp(MDApp):
             self.second_screen.update_data(dados_empresa)
             self.obter_cotacoes_por_dia(codigo_empresa)
             self.create_graph_widget(os.path.join(os.path.dirname(__file__), "historico", f"{codigo_empresa}.json"))
-        
+
     def botao_add_clicado(self):
         # Adicione a lógica que deseja executar quando o botão for clicado
         dados_empresa = {
@@ -169,7 +177,6 @@ class HealthApp(MDApp):
         # Salva a lista no arquivo JSON
         with open(arquivo_json, "w", encoding="utf-8") as file:
             json.dump(data, file, ensure_ascii=False, indent=4)
-
     def on_start(self):
         # Inicia a tarefa demorada em um thread secundário
         threading.Thread(target=self.perform_background_task).start()
@@ -179,42 +186,6 @@ class HealthApp(MDApp):
         if not os.path.exists(font_path):
             print(f"Erro: O arquivo de fonte '{font_path}' não foi encontrado.")
             return
-
-    def perform_background_task(self):
-        # Adicione sua lógica de tarefa de segundo plano aqui
-        print("Background task is running.")
-
-    def search_company(self, query):
-        # Carregue o JSON
-        try:
-            with open('empresas.json', 'r', encoding='utf-8') as file:
-                data = json.load(file)
-        except FileNotFoundError:
-            print("Erro: O arquivo 'empresas.json' não foi encontrado.")
-            return
-
-        # Pesquise a empresa pelo nome ou código
-        result = None
-        for code, name in data.items():
-            if query.lower() in name.lower() or query.lower() in code.lower():
-                result = {"codigo": code, "nome": name}
-                break
-
-        if result:
-            dados_empresa = self.obter_cotacao(result['codigo'])
-
-            if dados_empresa:
-                historico = os.path.join(os.path.dirname(__file__), "historico")
-                
-                # Construindo o caminho completo para o arquivo na pasta "historico"
-                caminho = os.path.join(historico, f"{result['codigo']}.json")
-
-                # Acessar a segunda tela e atualizar os widgets com os dados obtidos
-                self.sm.current = 'second'
-                self.second_screen.update_data(dados_empresa)
-                self.obter_cotacoes_por_dia(result['codigo'])
-                self.create_graph_widget(caminho)
-
     def obter_cotacao(self, code):
         # Construir a URL com o endpoint de cotação para um ticker específico
         url = f"https://brapi.dev/api/quote/{code}?token=4Rgd828GN7h8cLkUrxP1gK"
@@ -255,7 +226,51 @@ class HealthApp(MDApp):
             print(f"Erro na solicitação: {erro['message']}")
             return None
 
+
+    def perform_background_task(self):
+        # Adicione sua lógica de tarefa de segundo plano aqui
+        
+        print("Background task is running.")
+    def search_company(self, query):
+          
+        self.second_screen.ids.graph_layout_2.clear_widgets()
+        # Carregue o JSON
+        try:
+            with open('empresas.json', 'r', encoding='utf-8') as file:
+                data = json.load(file)
+        except FileNotFoundError:
+            print("Erro: O arquivo 'empresas.json' não foi encontrado.")
+            return
+
+        # Pesquise a empresa pelo nome ou código
+        result = None
+        for code, name in data.items():
+            if query.lower() in name.lower() or query.lower() in code.lower():
+                result = {"codigo": code, "nome": name}
+                break
+        if result:
+            dados_empresa = self.obter_cotacao(result['codigo'])
+
+            if dados_empresa:
+                historico_folder = os.path.join(os.path.dirname(__file__), "historico")
+                caminho = os.path.join(historico_folder, f"{result['codigo']}.json")
+
+                # Limpar widgets antes de adicionar um novo gráfico
+                self.second_screen.ids.graph_layout_2.clear_widgets()
+
+                # Atualizar os widgets na SecondScreen
+                self.sm.current = 'second'
+                self.second_screen.update_data(dados_empresa)
+                self.obter_cotacoes_por_dia(result['codigo'])
+
+                # Limpar widgets antes de adicionar um novo gráfico
+                self.second_screen.ids.graph_layout_2.clear_widgets()
+
+                # Criar ou atualizar o gráfico
+                self.create_graph_widget(caminho)
+
     def obter_cotacoes_por_dia(self, ticker):
+        
         # Construir o caminho da pasta "historico"
         historico_folder = os.path.join(os.path.dirname(__file__), "historico")
 
@@ -283,6 +298,7 @@ class HealthApp(MDApp):
             dados_cotacao = response.json().get('results', [])
 
             if dados_cotacao:
+                self.second_screen.ids.graph_layout_2.clear_widgets()
                 dados_formatados = {
                     'longName': dados_cotacao[0]['longName'],
                     'symbol': dados_cotacao[0]['symbol'],
@@ -321,15 +337,15 @@ class HealthApp(MDApp):
         window_width, window_height = Window.size
 
         # Define a proporção que você deseja para o gráfico (pode ser ajustada conforme necessário)
-        graph_aspect_ratio = 16 / 9  # Exemplo: proporção 16:9
+        graph_aspect_ratio = 20/ 9  # Exemplo: proporção 16:9
 
         # Calcula o tamanho proporcional do gráfico
-        graph_width = window_width * 0.8
+        graph_width = window_width * 0.9
         graph_height = graph_width / graph_aspect_ratio
 
         # Atualiza o tamanho do layout e do widget de imagem
-        self.second_screen.ids.graph_layout.size = (graph_width, graph_height)
-        self.second_screen.ids.graph_layout.size_hint = (None, None)
+        self.second_screen.ids.graph_layout_2.size = (graph_width, graph_height)
+        self.second_screen.ids.graph_layout_2.size_hint = (None, None)
 
         # Criar uma nova figura com eixo
         fig, ax = plt.subplots(figsize=(graph_width / 80, graph_height / 80))  # Ajuste de escala
@@ -341,7 +357,7 @@ class HealthApp(MDApp):
         ax.grid(True, linestyle='--', alpha=0.7)
 
         # Ajustar título e rótulos
-        ax.set_title(f'Histórico de Preços para {json_data["longName"]} (3 meses)', color='white', fontsize=22)
+        ax.set_title(f'Histórico de Preços para {" ".join(json_data["longName"].split()[:2])} (3 meses)', color='white', fontsize=22)
         ax.set_xlabel('Data', color='white', fontsize=12)
         ax.set_ylabel('Preço de Fechamento (R$)', color='white', fontsize=20)
 
@@ -358,22 +374,22 @@ class HealthApp(MDApp):
         ax.set_facecolor('black')
         fig.patch.set_facecolor('black')
 
-        # Salvar o gráfico como uma imagem
+        timestamp = datetime.now().strftime('%Y%m%d%H%M%S')
+        filename = f'graph_{timestamp}.png'
         buffer = BytesIO()
         fig.savefig(buffer, format='png', bbox_inches='tight')
         buffer.seek(0)
 
         # Criar widget de imagem Kivy e adicioná-lo ao layout
-        img = CoreImage(BytesIO(buffer.read()), ext='png', filename='graph.png')
+        img = CoreImage(BytesIO(buffer.read()), ext='png', filename=filename)
         image_widget = KivyImage(texture=img.texture, size=img.size, size_hint=(None, None))
 
         # Adicionar o widget de imagem ao layout, centralizando o gráfico
-        self.second_screen.ids.graph_layout.clear_widgets()  # Limpar widgets antes de adicionar um novo gráfico
-        self.second_screen.ids.graph_layout.add_widget(image_widget)
-        self.second_screen.ids.graph_layout.size = img.size
-        self.second_screen.ids.graph_layout.size_hint = (None, None)
-
+        self.second_screen.ids.graph_layout_2.clear_widgets()  # Limpar widgets antes de adicionar um novo gráfico
+        self.second_screen.ids.graph_layout_2.add_widget(image_widget)
+        self.second_screen.ids.graph_layout_2.size = img.size
+        self.second_screen.ids.graph_layout_2.size_hint = (None, None)
     
-# Verifica se o código está sendo executado diretamente
+# INICIA O APP
 if __name__ == "__main__":
     HealthApp().run()

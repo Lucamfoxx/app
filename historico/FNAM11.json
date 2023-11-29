@@ -1,0 +1,15 @@
+{
+    "longName": "Fundo de Investimento Amazônia - FINAM",
+    "symbol": "FNAM11",
+    "historicalDataPrice": [
+        {
+            "date": 1701204856,
+            "open": 0.32,
+            "high": 0.33,
+            "low": 0.32,
+            "close": 0.33,
+            "volume": 64576000,
+            "adjustedClose": 0.33
+        }
+    ]
+}

@@ -3,24 +3,6 @@
     "symbol": "BBDC4",
     "historicalDataPrice": [
         {
-            "date": 1692882000,
-            "open": 15.44,
-            "high": 15.44,
-            "low": 14.96,
-            "close": 15.02,
-            "volume": 28986200,
-            "adjustedClose": 14.9607
-        },
-        {
-            "date": 1692968400,
-            "open": 15.07,
-            "high": 15.1,
-            "low": 14.74,
-            "close": 14.83,
-            "volume": 21558900,
-            "adjustedClose": 14.7714
-        },
-        {
             "date": 1693227600,
             "open": 14.85,
             "high": 15.43,
@@ -568,6 +550,24 @@
             "close": 16.16,
             "volume": 28854100,
             "adjustedClose": 16.16
+        },
+        {
+            "date": 1701090000,
+            "open": 16.18,
+            "high": 16.23,
+            "low": 15.96,
+            "close": 16.06,
+            "volume": 25263900,
+            "adjustedClose": 16.06
+        },
+        {
+            "date": 1701204885,
+            "open": 16.02,
+            "high": 16.28,
+            "low": 15.93,
+            "close": 16.2,
+            "volume": 40350900,
+            "adjustedClose": 16.2
         }
     ]
 }

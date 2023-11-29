@@ -3,15 +3,6 @@
     "symbol": "MGLU3",
     "historicalDataPrice": [
         {
-            "date": 1693227600,
-            "open": 2.93,
-            "high": 2.99,
-            "low": 2.86,
-            "close": 2.93,
-            "volume": 78970600,
-            "adjustedClose": 2.93
-        },
-        {
             "date": 1693314000,
             "open": 2.94,
             "high": 2.99,
@@ -552,13 +543,31 @@
             "adjustedClose": 1.99
         },
         {
-            "date": 1701119275,
-            "open": 0,
-            "high": 0,
-            "low": 0,
+            "date": 1701090000,
+            "open": 2.01,
+            "high": 2.07,
+            "low": 1.92,
             "close": 1.96,
-            "volume": 0,
+            "volume": 175562900,
             "adjustedClose": 1.96
+        },
+        {
+            "date": 1701176400,
+            "open": 1.95,
+            "high": 1.96,
+            "low": 1.86,
+            "close": 1.91,
+            "volume": 207491400,
+            "adjustedClose": 1.91
+        },
+        {
+            "date": 1701288195,
+            "open": 1.96,
+            "high": 2.03,
+            "low": 1.9,
+            "close": 1.9,
+            "volume": 189713800,
+            "adjustedClose": 1.9
         }
     ]
 }

@@ -3,24 +3,6 @@
     "symbol": "POMO4",
     "historicalDataPrice": [
         {
-            "date": 1692882000,
-            "open": 5.99,
-            "high": 6.01,
-            "low": 5.82,
-            "close": 5.93,
-            "volume": 6374300,
-            "adjustedClose": 5.8565
-        },
-        {
-            "date": 1692968400,
-            "open": 5.91,
-            "high": 5.95,
-            "low": 5.84,
-            "close": 5.95,
-            "volume": 5440300,
-            "adjustedClose": 5.8763
-        },
-        {
             "date": 1693227600,
             "open": 6.02,
             "high": 6.34,
@@ -568,6 +550,24 @@
             "close": 6.22,
             "volume": 7755600,
             "adjustedClose": 6.22
+        },
+        {
+            "date": 1701090000,
+            "open": 6.19,
+            "high": 6.26,
+            "low": 6.09,
+            "close": 6.18,
+            "volume": 3724000,
+            "adjustedClose": 6.18
+        },
+        {
+            "date": 1701204301,
+            "open": 6.18,
+            "high": 6.28,
+            "low": 6.16,
+            "close": 6.18,
+            "volume": 4629300,
+            "adjustedClose": 6.18
         }
     ]
 }

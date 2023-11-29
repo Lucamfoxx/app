@@ -3,33 +3,6 @@
     "symbol": "BTCI11",
     "historicalDataPrice": [
         {
-            "date": 1692882000,
-            "open": 9.51,
-            "high": 9.52,
-            "low": 9.46,
-            "close": 9.5,
-            "volume": 404385,
-            "adjustedClose": 9.2142
-        },
-        {
-            "date": 1692968400,
-            "open": 9.5,
-            "high": 9.51,
-            "low": 9.45,
-            "close": 9.5,
-            "volume": 261734,
-            "adjustedClose": 9.2142
-        },
-        {
-            "date": 1693227600,
-            "open": 9.5,
-            "high": 9.51,
-            "low": 9.48,
-            "close": 9.5,
-            "volume": 181847,
-            "adjustedClose": 9.2142
-        },
-        {
             "date": 1693314000,
             "open": 9.5,
             "high": 9.5,
@@ -568,6 +541,33 @@
             "close": 9.66,
             "volume": 187587,
             "adjustedClose": 9.66
+        },
+        {
+            "date": 1701090000,
+            "open": 9.66,
+            "high": 9.7,
+            "low": 9.56,
+            "close": 9.65,
+            "volume": 302584,
+            "adjustedClose": 9.65
+        },
+        {
+            "date": 1701176400,
+            "open": 9.66,
+            "high": 9.7,
+            "low": 9.59,
+            "close": 9.68,
+            "volume": 217202,
+            "adjustedClose": 9.68
+        },
+        {
+            "date": 1701288230,
+            "open": 9.69,
+            "high": 9.7,
+            "low": 9.56,
+            "close": 9.62,
+            "volume": 226203,
+            "adjustedClose": 9.62
         }
     ]
 }

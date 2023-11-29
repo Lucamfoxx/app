@@ -5,5 +5,82 @@
         "cotacao": "R$ 1.96",
         "preco_anterior": "Preço Anterior: R$ 1.99",
         "volume": "Volume: 0"
+    },
+    {
+        "simbolo": "ETER3",
+        "nome_completo": "Eternit S.A.",
+        "cotacao": "R$ 8.95",
+        "preco_anterior": "Preço Anterior: R$ 8.93",
+        "volume": "Volume: 130200"
+    },
+    {
+        "simbolo": "FVPQ11",
+        "nome_completo": "FVPQ - Fii V Parque",
+        "cotacao": "R$ 110.11",
+        "preco_anterior": "Preço Anterior: R$ 110.02",
+        "volume": "Volume: 1015"
+    },
+    {
+        "simbolo": "LIGT3",
+        "nome_completo": "Light S.A.",
+        "cotacao": "R$ 6.08",
+        "preco_anterior": "Preço Anterior: R$ 5.98",
+        "volume": "Volume: 473600"
+    },
+    {
+        "simbolo": "FVPQ11",
+        "nome_completo": "FVPQ - Fii V Parque",
+        "cotacao": "R$ 110.11",
+        "preco_anterior": "Preço Anterior: R$ 110.02",
+        "volume": "Volume: 1015"
+    },
+    {
+        "simbolo": "MGLU3",
+        "nome_completo": "Magazine Luiza S.A.",
+        "cotacao": "R$ 1.89",
+        "preco_anterior": "Preço Anterior: R$ 1.96",
+        "volume": "Volume: 194292900"
+    },
+    {
+        "simbolo": "BABA34",
+        "nome_completo": "Alibaba Group Holding Limited",
+        "cotacao": "R$ 13.33",
+        "preco_anterior": "Preço Anterior: R$ 13.6",
+        "volume": "Volume: 657398"
+    },
+    {
+        "simbolo": "HASH11",
+        "nome_completo": "Hashdex Nasdaq Crypto Index Fundo De Indice",
+        "cotacao": "R$ 29.23",
+        "preco_anterior": "Preço Anterior: R$ 28.84",
+        "volume": "Volume: 346487"
+    },
+    {
+        "simbolo": "MGLU3",
+        "nome_completo": "Magazine Luiza S.A.",
+        "cotacao": "R$ 1.91",
+        "preco_anterior": "Preço Anterior: R$ 1.96",
+        "volume": "Volume: 207491390"
+    },
+    {
+        "simbolo": "B3SA3",
+        "nome_completo": "B3 S.A. - Brasil, Bolsa, Balcão",
+        "cotacao": "R$ 13.32",
+        "preco_anterior": "Preço Anterior: R$ 12.92",
+        "volume": "Volume: 28252500"
+    },
+    {
+        "simbolo": "MGLU3",
+        "nome_completo": "Magazine Luiza S.A.",
+        "cotacao": "R$ 1.91",
+        "preco_anterior": "Preço Anterior: R$ 1.96",
+        "volume": "Volume: 207491390"
+    },
+    {
+        "simbolo": "MGLU3",
+        "nome_completo": "Magazine Luiza S.A.",
+        "cotacao": "R$ 1.9",
+        "preco_anterior": "Preço Anterior: R$ 1.91",
+        "volume": "Volume: 189133100"
     }
 ]

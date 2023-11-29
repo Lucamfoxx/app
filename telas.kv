@@ -108,7 +108,7 @@
         MDLabel:
             id: cotacao_label
             font_size: self.width * 0.09
-            pos_hint: {"center_x": 0.89, "center_y": 0.85}
+            pos_hint: {"center_x": 0.8, "center_y": 0.835}
             halign: "left"
             theme_text_color: "Custom"
             text_color: [0, 1, 0, 1]
@@ -146,12 +146,10 @@
 
         MDBoxLayout:
             orientation: 'vertical'
-            size_hint: 0.8, 0.5
+
             pos_hint: {"center_x": 0.485, "center_y": 0.4}
-            spacing: dp(10)
-            padding: dp(20)
             # Adicionando um layout para o gráfico
-            id: graph_layout
+            id: graph_layout_2  
 
         Image:
             id: add_button

@@ -3,24 +3,6 @@
     "symbol": "PETR4",
     "historicalDataPrice": [
         {
-            "date": 1692882000,
-            "open": 32.27,
-            "high": 32.72,
-            "low": 31.84,
-            "close": 32.19,
-            "volume": 49332300,
-            "adjustedClose": 30.9989
-        },
-        {
-            "date": 1692968400,
-            "open": 32.38,
-            "high": 32.47,
-            "low": 31.8,
-            "close": 31.97,
-            "volume": 34079000,
-            "adjustedClose": 30.7871
-        },
-        {
             "date": 1693227600,
             "open": 32.1,
             "high": 32.34,
@@ -568,6 +550,24 @@
             "close": 35.27,
             "volume": 53456200,
             "adjustedClose": 35.27
+        },
+        {
+            "date": 1701090000,
+            "open": 35,
+            "high": 35.4,
+            "low": 34.75,
+            "close": 35.07,
+            "volume": 36996000,
+            "adjustedClose": 35.07
+        },
+        {
+            "date": 1701205664,
+            "open": 35.17,
+            "high": 35.62,
+            "low": 35.15,
+            "close": 35.6,
+            "volume": 36875900,
+            "adjustedClose": 35.6
         }
     ]
 }

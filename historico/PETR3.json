@@ -552,13 +552,22 @@
             "adjustedClose": 37.75
         },
         {
-            "date": 1701119254,
-            "open": 0,
-            "high": 0,
-            "low": 0,
+            "date": 1701090000,
+            "open": 37.52,
+            "high": 37.86,
+            "low": 37.01,
             "close": 37.5,
-            "volume": 0,
+            "volume": 9476000,
             "adjustedClose": 37.5
+        },
+        {
+            "date": 1701203346,
+            "open": 37.5,
+            "high": 38.09,
+            "low": 37.5,
+            "close": 37.78,
+            "volume": 5933700,
+            "adjustedClose": 37.78
         }
     ]
 }

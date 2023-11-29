@@ -3,15 +3,6 @@
     "symbol": "BABA34",
     "historicalDataPrice": [
         {
-            "date": 1693227600,
-            "open": 15.88,
-            "high": 16.22,
-            "low": 15.88,
-            "close": 16.02,
-            "volume": 107328,
-            "adjustedClose": 16.02
-        },
-        {
             "date": 1693314000,
             "open": 16.22,
             "high": 16.35,
@@ -552,13 +543,31 @@
             "adjustedClose": 13.7
         },
         {
-            "date": 1701119400,
-            "open": 0,
-            "high": 0,
-            "low": 0,
+            "date": 1701090000,
+            "open": 13.71,
+            "high": 13.71,
+            "low": 13.48,
             "close": 13.6,
-            "volume": 0,
+            "volume": 211302,
             "adjustedClose": 13.6
+        },
+        {
+            "date": 1701176400,
+            "open": 13.46,
+            "high": 13.5,
+            "low": 13.12,
+            "close": 13.3,
+            "volume": 692837,
+            "adjustedClose": 13.3
+        },
+        {
+            "date": 1701288140,
+            "open": 13.13,
+            "high": 13.19,
+            "low": 13.02,
+            "close": 13.09,
+            "volume": 672433,
+            "adjustedClose": 13.09
         }
     ]
 }

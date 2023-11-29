@@ -3,15 +3,6 @@
     "symbol": "HASH11",
     "historicalDataPrice": [
         {
-            "date": 1693227600,
-            "open": 20.93,
-            "high": 21.35,
-            "low": 20.93,
-            "close": 21.1,
-            "volume": 158788,
-            "adjustedClose": 21.1
-        },
-        {
             "date": 1693314000,
             "open": 21.1,
             "high": 22.44,
@@ -556,9 +547,27 @@
             "open": 29.11,
             "high": 29.39,
             "low": 28.52,
-            "close": 28.56,
-            "volume": 366926,
-            "adjustedClose": 28.56
+            "close": 28.84,
+            "volume": 431059,
+            "adjustedClose": 28.84
+        },
+        {
+            "date": 1701176400,
+            "open": 28.98,
+            "high": 29.49,
+            "low": 28.85,
+            "close": 29.24,
+            "volume": 354774,
+            "adjustedClose": 29.24
+        },
+        {
+            "date": 1701288215,
+            "open": 29.39,
+            "high": 29.53,
+            "low": 28.9,
+            "close": 29.02,
+            "volume": 194986,
+            "adjustedClose": 29.02
         }
     ]
 }
