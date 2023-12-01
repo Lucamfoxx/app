@@ -82,5 +82,40 @@
         "cotacao": "R$ 1.9",
         "preco_anterior": "Preço Anterior: R$ 1.91",
         "volume": "Volume: 189133100"
+    },
+    {
+        "simbolo": "CCRO3",
+        "nome_completo": "CCR S.A.",
+        "cotacao": "R$ 13.54",
+        "preco_anterior": "Preço Anterior: R$ 13.38",
+        "volume": "Volume: 4869200"
+    },
+    {
+        "simbolo": "5GTK11",
+        "nome_completo": "Investo Etf Bluestar 5G Communications Index Fundo De Indice - Investimento No Exterior",
+        "cotacao": "R$ 76.52",
+        "preco_anterior": "Preço Anterior: R$ 76.81",
+        "volume": "Volume: 86"
+    },
+    {
+        "simbolo": "5GTK11",
+        "nome_completo": "Investo Etf Bluestar 5G Communications Index Fundo De Indice - Investimento No Exterior",
+        "cotacao": "R$ 76.52",
+        "preco_anterior": "Preço Anterior: R$ 76.81",
+        "volume": "Volume: 86"
+    },
+    {
+        "simbolo": "MGLU3",
+        "nome_completo": "Magazine Luiza S.A.",
+        "cotacao": "R$ 2.02",
+        "preco_anterior": "Preço Anterior: R$ 1.88",
+        "volume": "Volume: 282840100"
+    },
+    {
+        "simbolo": "A1AP34",
+        "nome_completo": "Advance Auto Parts, Inc.",
+        "cotacao": "R$ 15.68",
+        "preco_anterior": "Preço Anterior: R$ 15.66",
+        "volume": "Volume: 76"
     }
 ]

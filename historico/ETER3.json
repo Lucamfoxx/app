@@ -3,15 +3,6 @@
     "symbol": "ETER3",
     "historicalDataPrice": [
         {
-            "date": 1693314000,
-            "open": 9.06,
-            "high": 9.38,
-            "low": 8.96,
-            "close": 9.38,
-            "volume": 231700,
-            "adjustedClose": 9.2979
-        },
-        {
             "date": 1693400400,
             "open": 9.44,
             "high": 9.45,
@@ -561,13 +552,22 @@
             "adjustedClose": 8.99
         },
         {
-            "date": 1701288054,
+            "date": 1701262800,
             "open": 8.9,
             "high": 9,
-            "low": 8.77,
-            "close": 8.77,
-            "volume": 143900,
-            "adjustedClose": 8.77
+            "low": 8.72,
+            "close": 8.72,
+            "volume": 177300,
+            "adjustedClose": 8.72
+        },
+        {
+            "date": 1701377377,
+            "open": 8.75,
+            "high": 8.75,
+            "low": 8.56,
+            "close": 8.62,
+            "volume": 136200,
+            "adjustedClose": 8.62
         }
     ]
 }
